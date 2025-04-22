@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; url=https://shopee.co.id/universal-link">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengarahkan ke Shopee...</title>
+    <script>
+        // Ambil parameter dari URL (misal: ?link=https://shopee.co.id/abcd)
+        const params = new URLSearchParams(window.location.search);
+        const target = params.get("link") || "https://shopee.co.id/universal-link";
+
+        // Paksa redirect
+        window.location.href = target;
+    </script>
+</head>
+<body>
+    <p>Mengarahkan ke Shopee... Jika tidak otomatis, <a id="link" href="#">klik di sini</a>.</p>
+    <script>
+        document.getElementById("link").href = target;
+    </script>
+</body>
+</html>
